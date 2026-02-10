@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sunrise Coffee</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" href="favicon.png">
+</head>
+
+<body>
+
+
+
+<nav>
+    <div class="nav-container">
+        <h2 class="logo">Sunrise Coffee</h2>
+        <ul class="nav-links">
+            <li><a href="about.html">About</a></li>
+            <li><a href="menu.html">Menu</a></li>
+            <li><a href="#hours">Hours</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </div>
+</nav>
+
+  <header class="hero">
+    <div class="hero-text">
+        <h1>Sunrise Coffee</h1>
+        <p>Fresh brews. Cozy vibes. Every day.</p>
+        <a href="menu.html" class="btn">View Menu</a>
+    </div>
+    <div class="scroll-down">
+  ↓
+</div>
+  </header>
+
+  <section id="about" class="fade-section">
+  <div class="about-row">
+    <img src="cafe-front.jpg" alt="Inside Sunrise Coffee">
+
+    <div class="about-text">
+      <h2>About Us</h2>
+      <p>
+        Sunrise Coffee is your neighborhood spot for thoughtfully crafted drinks,
+        fresh baked goods, and a welcoming place to unwind. We’re passionate about
+        serving high-quality coffee and creating a cozy atmosphere where everyone
+        feels at home.
+      </p>
+      <p>
+        Whether you're catching up with friends, getting work done, or enjoying
+        a quiet moment, Sunrise Coffee is designed to be part of your daily routine.
+      </p>
+      <a href="about.html" class="btn about-btn">Read Our Story →</a>
+    </div>
+  </div>
+</section>
+
+
+
+
+<section id="gallery" class="fade-section">
+  <h2>Inside Sunrise Coffee</h2>
+  <div class="gallery-grid">
+    <img src="coffee1.jpeg" alt="Latte art" class="fade-item">
+    <img src="coffee2.jpeg" alt="Cafe interior" class="fade-item">
+    <img src="coffee3.jpeg" alt="Fresh pastries" class="fade-item">
+    
+  </div>
+</section>
+
+<section id="testimonials" class="fade-section">
+  <h2>What Our Customers Say</h2>
+  <div class="testimonial-grid">
+    <div class="testimonial fade-item">
+      <p>"Best latte in town and such a cozy vibe!"</p>
+      <span>— Sarah M.</span>
+    </div>
+    <div class="testimonial fade-item">
+      <p>"My favorite weekend study spot."</p>
+      <span>— Jason T.</span>
+    </div>
+    <div class="testimonial fade-item">
+      <p>"Friendly staff and amazing pastries."</p>
+      <span>— Priya L.</span>
+    </div>
+  </div>
+</section>
+
+
+  <section id="hours" class="fade-section">
+    <h2>Hours & Location</h2>
+    <div class="hours-layout">
+    <div class="info-card">
+        <p><strong>Mon–Fri:</strong> 7am – 6pm</p>
+        <p><strong>Sat–Sun:</strong> 8am – 4pm</p>
+        <p><strong>Address:</strong> 37325 Sky Canyon Dr, Murrieta</p>
+    </div>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15908.306831068472!2d-117.11470920000001!3d33.58954955!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80db7db584495bf3%3A0x8cd755553bf1b219!2sFrench%20Valley%20Cafe!5e1!3m2!1sen!2sus!4v1770680224414!5m2!1sen!2sus" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+</section>
+
+  <section id="contact" class="fade-section">
+  <h2>Contact Us</h2>
+
+  <div class="contact-layout">
+    <div class="contact-info info-card">
+      <p>📧 <strong>Email:</strong> hello@sunrisecoffee.com</p>
+      <p>📞 <strong>Phone:</strong> (951) 466-7210</p>
+      <p>We’d love to hear from you! Reach out with questions, catering requests, or feedback.</p>
+    </div>
+
+    <form class="contact-form">
+      <input type="text" placeholder="Your Name" required>
+      <input type="email" placeholder="Your Email" required>
+      <textarea placeholder="Your Message" rows="5"></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </div>
+</section>
+
+
+  <footer class="footer">
+  <div class="footer-content">
+    <div>
+      <h3>Sunrise Coffee</h3>
+      <p>Fresh brews. Cozy vibes. Every day.</p>
+    </div>
+    <div>
+      <p><strong>Hours</strong></p>
+      <p>Mon–Fri: 7am – 6pm</p>
+      <p>Sat–Sun: 8am – 4pm</p>
+    </div>
+    <div>
+      <p><strong>Follow Us</strong></p>
+      <p>Instagram • Facebook</p>
+    </div>
+  </div>
+  <p class="copyright">© 2026 Sunrise Coffee</p>
+</footer>
+
+<div id="lightbox" class="lightbox">
+  <img src="" alt="Expanded view">
+</div>
+<script>
+const images = document.querySelectorAll(".gallery-grid img");
+const lightbox = document.getElementById("lightbox");
+const lightboxImg = lightbox.querySelector("img");
+
+images.forEach(img => {
+  img.addEventListener("click", () => {
+    lightbox.classList.add("show");
+    lightboxImg.src = img.src;
+  });
+});
+
+lightbox.addEventListener("click", () => {
+  lightbox.classList.remove("show");
+});
+</script>
+<script>
+const sections = document.querySelectorAll("section[id]");
+const navLinks = document.querySelectorAll(".nav-links a[href^='#']");
+
+window.addEventListener("scroll", () => {
+  let current = "";
+  sections.forEach(section => {
+    const sectionTop = section.offsetTop - 80;
+    if (window.scrollY >= sectionTop) {
+      current = section.getAttribute("id");
+    }
+  });
+
+  navLinks.forEach(link => {
+    link.classList.remove("active");
+    if (link.getAttribute("href") === "#" + current) {
+      link.classList.add("active");
+    }
+  });
+});
+</script>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  const sections = document.querySelectorAll('.fade-section');
+
+  const observer = new IntersectionObserver((entries, obs) => {
+    entries.forEach(entry => {
+      if (!entry.isIntersecting) return;
+      entry.target.classList.add('visible');
+      obs.unobserve(entry.target);
+    });
+  }, { threshold: 0.15 });
+
+  sections.forEach(section => observer.observe(section));
+});
+</script>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+  const testimonialSection = document.querySelector('#testimonials');
+  if (!testimonialSection) return;
+
+  const cards = testimonialSection.querySelectorAll('.fade-item');
+
+  const observer = new IntersectionObserver((entries, obs) => {
+    entries.forEach(entry => {
+      if (!entry.isIntersecting) return;
+
+      cards.forEach((card, index) => {
+        setTimeout(() => {
+          card.classList.add('visible');
+        }, index * 180);
+      });
+
+      obs.unobserve(entry.target);
+    });
+  }, { threshold: 0.25 });
+
+  observer.observe(testimonialSection);
+});
+</script>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+  const gallerySection = document.querySelector('#gallery');
+  if (!gallerySection) return;
+
+  const images = gallerySection.querySelectorAll('.fade-item');
+
+  const observer = new IntersectionObserver((entries, obs) => {
+    entries.forEach(entry => {
+      if (!entry.isIntersecting) return;
+
+      images.forEach((img, index) => {
+        setTimeout(() => {
+          img.classList.add('visible');
+        }, index * 150);
+      });
+
+      obs.unobserve(entry.target);
+    });
+  }, { threshold: 0.2 });
+
+  observer.observe(gallerySection);
+});
+</script>
+
+</body>
+</html>
